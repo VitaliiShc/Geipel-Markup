@@ -1,3 +1,7 @@
+:root {
+  --border: 1px solid black;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -20,7 +24,6 @@ li {
   width: 100%;
   padding-block: 48px;
   max-width: 1024px;
-  /* font-size: 18px; */
   line-height: 1.5;
   font-family: 'Times New Roman', serif;
 }
@@ -55,7 +58,7 @@ li {
 
 .card {
   box-sizing: border-box;
-  border: 1px solid black;
+  border: var(--border);
 
   display: flex;
   flex-direction: column;
@@ -73,6 +76,8 @@ li {
 .description {
   width: 100%;
   padding: 18px 48px;
+  border-left: none;
+  border-top: var(--border);
 }
 
 .description-list {
@@ -86,7 +91,7 @@ li {
   padding: 12px 24px;
   color: inherit;
   background-color: gainsboro;
-  border: 1px solid black;
+  border: var(--border);
   border-radius: 4px;
   transition: background-color 300ms ease-in-out;
 }
@@ -123,5 +128,10 @@ li {
   .img-float {
     float: left;
     margin: 0 10px 10px 0;
+  }
+
+  .description {
+    border-top: none;
+    border-left: var(--border);
   }
 }
